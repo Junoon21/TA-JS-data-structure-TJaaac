@@ -9,7 +9,6 @@ let character={
 //  Re-assign the value of `character` variable to and object with the key `characterName` and value of "Arya"
 character.characterName="Arya";
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
-
 let age = 20;
 character["character-age"]=age;
 // - Add a new key `sur name` with the value of the surname of the character i.e "Stark". (Don't remove the space between `sur` and `name`)
@@ -54,8 +53,8 @@ character["playedBy"]="Maisie Williams";
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
 alert(character["playedBy"]);
 // - Using the function `console.log` log the value of the key `42`. You don't have to add the key
-console.log(42);
+console.log(character["42"]);
 // - Add a new key named `totalSeasons` with the value of `1 + 2 + 3 + 2`. Use this expression
-totalSeasons=1 + 2 + 3 + 2;
+character.totalSeasons=1 + 2 + 3 + 2;
 // - Access the value of the key `totalSeason` (it should be 8)
-console.log(totalSeasons);
+console.log(character.totalSeasons);
