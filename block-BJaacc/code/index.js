@@ -20,6 +20,7 @@ console.log(students[42]);
 Object.keys(students);
 // 11. Can you define a key of `let or var` in any object? Reason.
 yes we can define a key named 'let or var' because key names are string values and are different 
+students["let"]="abc";
 // 12. Delete the `isAdult` property from the object `students`. Also, print the object before or after deleting the property
 delete students.isAdult;
 {42: 'The answer to the meaning of life', studentName: 'ritika singh', batch: 16'}
