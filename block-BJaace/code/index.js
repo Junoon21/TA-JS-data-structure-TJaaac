@@ -1,11 +1,11 @@
 // 1. Declare an empty array and store it in a variable.
-
+let array=[];
 // 2. Now check the type of empty array you declared above.
-
+Array.isArray(array);
 // 3. Create an array named `colors` that contains five different names of colors as strings.
-
+let colors=["red","blue","yellow","orange","pink"];
 // 4. Access the first color in the array and print it to the console using `console.log()`
-
+console.log(colors[0];)
 // 5. Access the third color in the array and print it to the console using `console.log()`
 
 // 6. Access the last color in the array and print it to the console using `console.log()`
