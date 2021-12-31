@@ -12,14 +12,21 @@ for(let number of numbers){
 }
 let average=sum/(numbers.length);
 // 4. Find the highest number in the array and print it to the console using console.log()
-for(let i=0;i<numbers.length;i++){
-    if(numbers[i]>numbers[i+1]){
-        max=numbers[i];
+let highestNumber=number[0];
+for(let number of numbers){
+    if(number>highestNumber){
+        highestNumber=number;
     }
-    console.log(max);
 }
+console.log(highestNumber);
 // 5. Find the lowest number in the array and print it to the console using console.log()
-
+let lowestNumber=number[0];
+for(let number of numbers){
+    if(number<lowestNumber){
+        lowestNumber=number;
+    }
+}
+console.log(lowestNumber);
 // 6. Find the even numbers in the array and print them to the console using console.log()
 let even=[];
 for(let number of numbers){
