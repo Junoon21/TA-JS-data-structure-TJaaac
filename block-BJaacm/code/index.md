@@ -13,7 +13,8 @@ let newUser = user;
 
 - Create the memory representation of the above snippet on notebook.
 - Take a photo/screenshot and add it to the folder `code`
-<img src="../ritika.jpg">
+<img src="../">
+
 <!-- To add this image here use ![name](./hello.jpg) -->
 
 2. Answer the following with reason:
@@ -24,12 +25,12 @@ let newUser = user;
 - `user.name == newUser.name;`//yes true they have the same address and hence are pointing to the same value.
 - `user.sibling == newUser.sibling;`//yes true they have the same address and hence are pointing to the same value.
 - `user.sibling === newUser.sibling;`//yes true they have the same address and hence are pointing to the same value.
-- `user.sibling == allBrothers;`//true because the values are same.
-- `user.sibling === allBrothers;`//false , they are not strictly equal to because though they are pointing the same values but through different addresses.
+- `user.sibling == allBrothers;`//false because both have different addresses.
+- `user.sibling === allBrothers;`//false because both have different addresses.though they are pointing the same values but through different addresses.
 - `brothersCopy === allBrothers;`//false , they are not strictly equal to because though they are pointing the same values but through different addresses.
-- `brothersCopy == allBrothers;`//true because the values are same.
+- `brothersCopy == allBrothers;`//false because both have different addresses.
 - `brothersCopy == user.sibling;`/true because the values are same.
-- `brothersCopy === user.sibling;`//false , they are not strictly equal to because though they are pointing the same values but through different addresses.
-- `brothersCopy[0] === user.sibling[0];`//false , they are not strictly equal to because though they are pointing the same values but through different addresses.
-- `brothersCopy[1] === user.sibling[1];`//false , they are not strictly equal to because though they are pointing the same values but through different addresses.
+- `brothersCopy === user.sibling;`//true
+- `brothersCopy[0] === user.sibling[0];`//true
+- `brothersCopy[1] === user.sibling[1];`//true
 - `user.sibling[1] === newUser.sibling[1];`//true because the values are same.
