@@ -31,9 +31,9 @@ character.greet=function(){
 // - Check by calling `greet` and see if the message changed or not.
 character.greet();
 //  - Add a new property in the character object `isAdult`. The value will be true if age is greater than 18 or it will be false.
-character.isAdult=age_check(character.characterName);
-function age_check(Age){
-Age>18?true:false;
+character.isAdult = ageCheck(character["character-name"]);
+function ageCheck(age){
+age>18?true:false;
 }
 // - Add a new method (function inside objects are called methods) named `changeIsAdult`. When called should be able to flip the value of `isAdult` from true to false and false to true.
  character.changeIsAdult(character.isAdult);
