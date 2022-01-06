@@ -10,11 +10,11 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
+console.log(person2.firstName); // 'Arya'
+console.log(person.firstName); // 'Arya'
+console.log(person.lastName); // 'Doe'
+console.log(person == person2); // true
+console.log(person === person2); // true
 console.log(person.lastName === person2.lastName); // output
 ```
 
