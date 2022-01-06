@@ -19,25 +19,66 @@ Hint: (Structure of got variable)
 */
 
 // 1. Log the value of key "houses"
-
+console.log(got.houses)
 // 2. Log the length of the "houses" key
-
+console.log(got.houses.length)
 // 3. Log the name of all houses in got one by one
-
+for(let house of got.houses){
+  console.log(house.name)
+}
 // 4. Log the name of all the people in house Starks (index 0) one by one
+for(let name of got.houses[0].people){
+  for(let i=0;i<got.houses[0].people.length-1;i++){
+    console.log(got.houses[0].people[i].name)
+  }
+}
 
 // 5. Log the name of all the people in house Lannisters (index 1) one by one
-
+for(let name of got.houses[1].people){
+  for(let i=0;i<got.houses[1].people.length-1;i++){
+    console.log(got.houses[1].people[i].name)
+  }
+}
 // 6. Log the description of all the people in house Lannisters (index 1) one by one
-
+for(let description of got.houses[1].people){
+  for(let i=0;i<got.houses[1].people.length-1;i++){
+    console.log(got.houses[1].people[i].description)
+  }
+}
 // 7. Log the name and description of all the people in house Lannisters (index 1) one by one like `I am [name] and my bio is [description]`
+for(let name of got.houses[1].people){
+  for(let description of got.houses[1].people){
 
+  for(let i=0;i<got.houses[1].people.length-1;i++){
+    console.log(`I am ${got.houses[1].people[i].name} and my bio is ${got.houses[1].people[i].name}`)
+  }
+}
+}
 // 8. Log the name and description of all the people in house Starks (index 0) one by one like `I am [name] and my bio is [description]`
+for(let name of got.houses[0].people){
+  for(let description of got.houses[0].people){
 
+  for(let i=0;i<got.houses[0].people.length-1;i++){
+    console.log(`I am ${got.houses[0].people[i].name} and my bio is ${got.houses[0].people[0].name}`)
+  }
+}
+}
 // 9. Log the name and description of the people in house Starks whose name is `Robb Stark`
-
+for(let k=0; k < got.houses[0].name;k++){
+  // for(let name of got.houses[0].people.description){
+    if(got.houses[0].people[0].name==="Robb Stark"){
+    
+      console.log(`I am ${got.houses[0].people[0].name} and my bio is ${got.houses[0].people[0].name}`)
+    }
+  // }
+  
+}
 // 10. Log the name and description of the people in house Lannisters whose name is `Tywin Lannister`
-
+for(let j=0;j<got.houses[1].people[got.houses[1].people.length-1];j++){
+  if(got.houses[1].people[1].name==="Tywin Lannister"){
+    console.log(`I am ${got.houses[1].people[1].name} and my bio is ${got.houses[1].people[1].description}`)
+  }
+}
 // 11. Push the name of the houses in an array named `houseNames` and Log the array
 
 // 12. Log the size of people in Starks house
