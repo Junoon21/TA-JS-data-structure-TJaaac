@@ -36,7 +36,7 @@ var person2 = personDetails(person1);
 console.log(person1);
 console.log(person2);
 ```
-//The value of person 1 and 2 will be the same as they are pointing to the same adress , hence the object reffred is same.So name:'john', age='50'.
+//The value of person 1 and 2 will not be the same as they are pointing to the different address So name:'alex', age='25'and name: 'John', age: 50 .
 
 3. What will be the output of the below code:
 
