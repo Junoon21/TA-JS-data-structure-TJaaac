@@ -12,14 +12,14 @@ let arr2 = arr;
 Answer the following with reason after going through the above code:
 
 - `[10] === [10]`
-- What is the value of obj? // answer
-- `obj == newObj`
-- `obj === newObj`
-- `user === newObj`
-- `user == newObj`
-- `user == obj`
-- `arr == arr2`
-- `arr === arr2`
+- What is the value of obj? // answer true because the value is same
+- `obj == newObj`// false because both contain different addressed
+- `obj === newObj`//false because both contain different addresses
+- `user === newObj`//false because both contain different address
+- `user == newObj`//false because both contain different addressed
+- `user == obj`//true because they have same address
+- `arr == arr2`//true because they have same address
+- `arr === arr2`//true because they have same address
 
 2. What's will be the value of `person1` and `person2` ? Explain with reason. Draw the memory representation diagram.
 
@@ -36,6 +36,7 @@ var person2 = personDetails(person1);
 console.log(person1);
 console.log(person2);
 ```
+//The value of person 1 and 2 will be the same as they are pointing to the same adress , hence the object reffred is same.So name:'john', age='50'.
 
 3. What will be the output of the below code:
 
@@ -46,6 +47,6 @@ var user = {
 };
 user.brothers = brothers;
 brothers.push('Robb');
-console.log(user.brothers === brothers); //1. output
-console.log(user.brothers.length === brothers.length); //2. output
+console.log(user.brothers === brothers); //1. output true becausethey point o the same address and hence they are same and the output will be 'bran', 'john' and 'robb'.
+console.log(user.brothers.length === brothers.length); //2. output this condition is also true as they both have the same adress and the length will be 3.
 ```
