@@ -11,7 +11,7 @@ let arr2 = arr;
 
 Answer the following with reason after going through the above code:
 
-- `[10] === [10]`
+- `[10] === [10]`false
 - What is the value of obj? // answer true because the value is same
 - `obj == newObj`// false because both contain different addressed
 - `obj === newObj`//false because both contain different addresses
