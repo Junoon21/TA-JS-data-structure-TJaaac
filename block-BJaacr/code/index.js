@@ -19,74 +19,107 @@ Hint: (Structure of got variable)
 */
 
 // 1. Log the value of key "houses"
-console.log(got.houses)
+console.log(got.houses);
 // 2. Log the length of the "houses" key
-console.log(got.houses.length)
+console.log(got.houses.length);
 // 3. Log the name of all houses in got one by one
 for(let house of got.houses){
   console.log(house.name)
 }
 // 4. Log the name of all the people in house Starks (index 0) one by one
-for(let name of got.houses[0].people){
-  for(let i=0;i<got.houses[0].people.length-1;i++){
-    console.log(got.houses[0].people[i].name)
-  }
+// for(let name of got.houses[0].people){
+//   for(let i=0;i<got.houses[0].people.length-1;i++){
+//     console.log(got.houses[0].people[i].name)
+//   }
+// }
+for(let person of got.houses[0].people){
+  console.log(person.name)
 }
 
 // 5. Log the name of all the people in house Lannisters (index 1) one by one
-for(let name of got.houses[1].people){
-  for(let i=0;i<got.houses[1].people.length-1;i++){
-    console.log(got.houses[1].people[i].name)
-  }
+// for(let name of got.houses[1].people){
+//   for(let i=0;i<got.houses[1].people.length-1;i++){
+//     console.log(got.houses[1].people[i].name)
+//   }
+// }
+for(let person of got.houses[1].people){
+  console.log(person.name)
 }
 // 6. Log the description of all the people in house Lannisters (index 1) one by one
-for(let description of got.houses[1].people){
-  for(let i=0;i<got.houses[1].people.length-1;i++){
-    console.log(got.houses[1].people[i].description)
-  }
+// for(let description of got.houses[1].people){
+//   for(let i=0;i<got.houses[1].people.length-1;i++){
+//     console.log(got.houses[1].people[i].description)
+//   }
+// }
+for(let person of got.houses[1].people){
+  console.log(person.description);
 }
 // 7. Log the name and description of all the people in house Lannisters (index 1) one by one like `I am [name] and my bio is [description]`
-for(let name of got.houses[1].people){
-  for(let description of got.houses[1].people){
+// for(let name of got.houses[1].people){
+//   for(let description of got.houses[1].people){
 
-  for(let i=0;i<got.houses[1].people.length-1;i++){
-    console.log(`I am ${got.houses[1].people[i].name} and my bio is ${got.houses[1].people[i].name}`)
-  }
-}
+//   for(let i=0;i<got.houses[1].people.length-1;i++){
+//     console.log(`I am ${got.houses[1].people[i].name} and my bio is ${got.houses[1].people[i].name}`)
+//   }
+// }
+// }
+for(let person of got.houses[1].people){
+  console.log(`I am ${person.name} and my bio is ${person.description}`);
 }
 // 8. Log the name and description of all the people in house Starks (index 0) one by one like `I am [name] and my bio is [description]`
-for(let name of got.houses[0].people){
-  for(let description of got.houses[0].people){
+// for(let name of got.houses[0].people){
+//   for(let description of got.houses[0].people){
 
-  for(let i=0;i<got.houses[0].people.length-1;i++){
-    console.log(`I am ${got.houses[0].people[i].name} and my bio is ${got.houses[0].people[0].name}`)
-  }
-}
+//   for(let i=0;i<got.houses[0].people.length-1;i++){
+//     console.log(`I am ${got.houses[0].people[i].name} and my bio is ${got.houses[0].people[0].name}`)
+//   }
+// }
+// }
+for(let person of got.houses[0].people){
+  console.log(`I am ${person.name} and my bio is ${person.description}`);
 }
 // 9. Log the name and description of the people in house Starks whose name is `Robb Stark`
-for(let k=0; k < got.houses[0].name;k++){
-  // for(let name of got.houses[0].people.description){
-    if(got.houses[0].people[0].name==="Robb Stark"){
+// for(let k=0; k < got.houses[0].name;k++){
+//   // for(let name of got.houses[0].people.description){
+//     if(got.houses[0].people[0].name==="Robb Stark"){
     
-      console.log(`I am ${got.houses[0].people[0].name} and my bio is ${got.houses[0].people[0].name}`)
-    }
-  // }
+//       console.log(`I am ${got.houses[0].people[0].name} and my bio is ${got.houses[0].people[0].name}`)
+//     }
+//   // }
   
+// }
+for(let person of got.houses[0].people){
+  if(person.name === `Robb Stark`){
+    console.log(person.name, person.description)
+  }
 }
 // 10. Log the name and description of the people in house Lannisters whose name is `Tywin Lannister`
-for(let j=0;j<got.houses[1].people[got.houses[1].people.length-1];j++){
-  if(got.houses[1].people[1].name==="Tywin Lannister"){
-    console.log(`I am ${got.houses[1].people[1].name} and my bio is ${got.houses[1].people[1].description}`)
+// for(let j=0;j<got.houses[1].people[got.houses[1].people.length-1];j++){
+//   if(got.houses[1].people[1].name==="Tywin Lannister"){
+//     console.log(`I am ${got.houses[1].people[1].name} and my bio is ${got.houses[1].people[1].description}`)
+//   }
+// }
+for(let person of got.houses[1].people){
+  if(person.name === `Tywin Lannister`){
+    console.log(person.name, person.description);
   }
 }
 // 11. Push the name of the houses in an array named `houseNames` and Log the array
-
+let houseNames = [];
+for(let house of got.houses){
+  houseNames.push(house.name);
+}
+console.log(houseNames);
 // 12. Log the size of people in Starks house
-
+console.log(got.houses[0].people.length);
 // 13. Log the size of people in Lannisters house
-
+console.log(got.houses[1].people.length);
 // 14. Add the name and size of people in an object like {Starks: 4, Lannisters: 6} and log the object
-
+let newObj = {};
+for( let house of got.houses ){
+  newObj[house.name] = house.people.length;//why in braket?
+}
+console.log(newObj);
 // 15. Log the name of all the people of all the houses in got one by one
 
 // 16. Push all names into a new array named `allPeople` and log the value array.
@@ -98,3 +131,30 @@ for(let j=0;j<got.houses[1].people[got.houses[1].people.length-1];j++){
 // 19. Log the value and length `allDescription`
 
 // 20. Only the the description whose length is more than 30. (use .length property on string to get the length)
+//questions 
+1.
+let user = [12,23,34];
+let newUser = [12,23,34];
+user[0] == newUser[0];//true
+user[0] === newUser[0];//false
+user == newUser;//false
+user === newUser;//false
+2.
+function isUnwanted(){
+  return value == false ||
+         value == null ||
+         value == "" ||
+         value == 0 
+}
+function isUnwanted(){
+  return value == (false || null || "" || 0) ;
+}
+3.
+ return [10]===[10]; //is false why ?
+4. //While using for of loops what is the convention naming the terms , like 
+for(let house of got.houses){
+
+}
+for(let person of got.houses.people)
+for(let people of people.names)
+for(let  of account);
