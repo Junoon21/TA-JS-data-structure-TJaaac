@@ -69,17 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output will be 'John' because here cloning has been done and the values are stored in different variables also here we are referring to primitive data type , so changes made in the first will not be reflected.
+console.log(person.firstName); // output 'Arya'because here cloning has been done and the values are stored in different variables also here we are referring to primitive data type , so changes made in the first will not be reflected.
+console.log(personTwo.lastName); // 'Doe' because here no chnages have been made.
+console.log(person.firstName === personTwo.firstName); // false as here cloning has been done on the first layer , so after cloning values changed in primitive data types are not reflected.
+console.log(person == personTwo); // false because when cloning is done using spread operator the variables store different address.
+console.log(person === personTwo); // false because when cloning is done using spread operator the variables store different address.
+console.log(person.address === personTwo.address); // true because here cloning is done only on the first layer and the address has not been cloned so they share the same address.
+console.log(person.address == personTwo.address); // true because here cloning is done only on the first layer and the address has not been cloned so they share the same address.
+console.log(personTwo.address.city); // 'Navada'because here cloning has been done on the first layer and any changes made in the second layer will be reflected in both the non primitive data types.
+console.log(person.address.city); // 'Navada'because here cloning has been done on the first layer and any changes made in the second layer will be reflected in both the non primitive data types.
+console.log(person.address.city == personTwo.address.city); // true because though cloning has been done , it is shallow cloning , means cloning of the array has not been done hence they share the same address.
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -104,6 +104,12 @@ let blogs = [
 ];
 
 // Your code goes here
+let clonedBlogs=[
+  ...blogs
+  {
+    ...blogs.{}
+  }
+]
 ```
 
 5. Clone the `question` variable into a new variable named `questionClone`
@@ -129,6 +135,12 @@ var questions = [
 ];
 
 // Your code goes here
+let questionClone=[...questions
+                  {...questions.{
+                    ...[questions.{}.[]]
+                  }}
+
+]
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
